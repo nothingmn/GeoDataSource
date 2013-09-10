@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GeoDataSource</id>
+    <version>1.0.0</version>
+    <authors>Rob Chartier</authors>
+    <owners>Rob Chartier</owners>
+    <licenseUrl>http://creativecommons.org/licenses/by/3.0/</licenseUrl>
+    <projectUrl>https://github.com/nothingmn/GeoDataSource</projectUrl>
+    <iconUrl>http://www.geonames.org/geonames.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>GeoDataSource is a .NET Class Library based off of the data from http://www.geonames.org</description>
+    <releaseNotes>Initial public release</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>GeoNames Country Countries Province State TimeZone</tags>
+    <dependencies>
+      <dependency id="SharpZipLib" version="0.86.0" />
+    </dependencies>
+  </metadata>
+</package>
