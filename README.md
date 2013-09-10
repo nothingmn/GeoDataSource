@@ -20,8 +20,8 @@ When building, make sure you run the update process first, to get a fresh copy o
 
 Data Available
 ==============
-# Countries
-# Provinces
-# TimeZone Information
-# Feature Codes (detailed descriptions about each item)
+* Countries
+* Provinces
+* TimeZone Information
+* Feature Codes (detailed descriptions about each item)
 
