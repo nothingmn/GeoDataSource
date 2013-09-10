@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountriesTests.cs" />
+    <Compile Include="ThreadedProvinceData.cs" />
+    <Compile Include="UpdateTests.cs" />
     <Compile Include="ValidationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

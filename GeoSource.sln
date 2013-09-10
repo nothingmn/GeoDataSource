@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSource", "GeoSource\GeoSource.csproj", "{80E98FBC-2497-4ED5-AFBE-EA85A092771A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoDataSource", "GeoDataSource\GeoDataSource.csproj", "{B89CB9FE-0CBF-4903-959F-C84B53EC6E55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoDataSource.Tests", "GeoDataSource.Tests\GeoDataSource.Tests.csproj", "{F5AFD4E7-0F58-4756-B298-DB8C5915E009}"
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80E98FBC-2497-4ED5-AFBE-EA85A092771A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80E98FBC-2497-4ED5-AFBE-EA85A092771A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80E98FBC-2497-4ED5-AFBE-EA85A092771A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80E98FBC-2497-4ED5-AFBE-EA85A092771A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B89CB9FE-0CBF-4903-959F-C84B53EC6E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B89CB9FE-0CBF-4903-959F-C84B53EC6E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89CB9FE-0CBF-4903-959F-C84B53EC6E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
