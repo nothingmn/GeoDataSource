@@ -11,7 +11,7 @@ namespace GeoDataSource.Tests
     public class UpdateTests
     {
         [Test]
-        public void TestUpadater()
+        public void TestUpdateProcess()
         {
             //just make sure that this sucker doesnt throw an execption
             DataManager.Update().Wait();

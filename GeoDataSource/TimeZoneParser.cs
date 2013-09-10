@@ -31,17 +31,20 @@ namespace GeoDataSource
             return Names;
         }
 
-        static TimeZone ParseLine(string Line)
+        private static TimeZone ParseLine(string Line)
         {
             TimeZone n = new TimeZone();
             string[] parts = Line.Split('\t');
-            int id = 0;
+            double id = 0;
+
+
 
             n.CountryCode = parts[0];
             n.TimeZoneId = parts[1];
-            n.GMTOffSet = parts[2];
-            n.DSTOffSet = parts[3];
-            n.RawOffSet = parts[4];
+
+            if (double.TryParse(parts[2], out id)) n.GMTOffSet = id;
+            if (double.TryParse(parts[3], out id)) n.DSTOffSet = id;
+            if (double.TryParse(parts[4], out id)) n.RawOffSet = id;
 
             return n;
         }

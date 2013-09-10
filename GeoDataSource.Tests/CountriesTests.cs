@@ -20,9 +20,56 @@ namespace GeoDataSource.Tests
         }
 
         [Test]
+        public void GetInvalidCountryTest()
+        {
+            var invalid = GeoData.Current.GetCountry("3R!");
+            Assert.IsNull(invalid);
+        }
+
+        [Test]
         public void GetCanada()
         {
             var canada = GeoData.Current.GetCountry("CA");
+            Assert.IsNotNull(canada);
+
+        }
+        [Test]
+        public void GetProvinceBC()
+        {
+            var canada = GeoData.Current.GetCountry("CA");
+            var provinces= GeoData.Current.ProvincesByCountry(canada);
+            var bc = (from p in provinces where p.Name == "British Columbia" select p). FirstOrDefault();
+            Assert.IsNotNull(bc);
+
+        }
+        [Test]
+        public void GetProvinceBCTimeZone()
+        {
+            var canada = GeoData.Current.GetCountry("CA");
+            var provinces = GeoData.Current.ProvincesByCountry(canada);
+            var bc = (from p in provinces where p.Name == "British Columbia" select p).FirstOrDefault();
+
+            var bcTimeZone = GeoData.Current.TimeZone(bc);
+
+            Assert.IsNotNull(bcTimeZone);
+           
+        }
+        [Test]
+        public void GetProvinceBCTimeGMTIsMinus8()
+        {
+            var canada = GeoData.Current.GetCountry("CA");
+            var provinces = GeoData.Current.ProvincesByCountry(canada);
+            var bc = (from p in provinces where p.Name == "British Columbia" select p).FirstOrDefault();
+
+            var bcTimeZone = GeoData.Current.TimeZone(bc);
+
+            Assert.IsTrue(bcTimeZone.GMTOffSet == -8);
+
+        }
+        [Test]
+        public void GetCanadaISONumeric()
+        {
+            var canada = GeoData.Current.GetCountry("124");
             Assert.IsNotNull(canada);
 
         }

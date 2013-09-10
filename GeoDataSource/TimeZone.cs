@@ -11,10 +11,9 @@ namespace GeoDataSource
     {
         public string CountryCode { get; set; }
         public string TimeZoneId { get; set; }
-        public string Name { get; set; }
-        public string GMTOffSet { get; set; }
-        public string DSTOffSet { get; set; }
-        public string RawOffSet { get; set; }
+        public double GMTOffSet { get; set; }
+        public double DSTOffSet { get; set; }
+        public double RawOffSet { get; set; }
 
     }
 }
