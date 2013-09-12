@@ -103,5 +103,13 @@ namespace GeoDataSource.Tests
         }
 
 
+        [Test]
+        public void USAPhones()
+        {
+            var phones = PhoneManager.Current.AllByCountry("United States");
+            CollectionAssert.IsNotEmpty(phones);
+        }
+
+
     }
 }

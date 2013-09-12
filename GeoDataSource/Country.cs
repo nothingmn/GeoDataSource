@@ -32,5 +32,8 @@ namespace GeoDataSource
         public string Neighbours { get; set; }
         public string EquivalentFipsCode { get; set; }
 
+
+        public IEnumerable<PhoneInformation> PhoneInformation { get; set; }
+
     }
 }

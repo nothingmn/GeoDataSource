@@ -40,6 +40,7 @@ namespace GeoDataSource
 			}
 		}
 
+
         public List<TimeZone> TimeZones { get; set; }
 	    public List<FeatureCode> FeatureCodes { get; set; }
         public List<GeoName> GeoNames { get; set; }
@@ -128,6 +129,9 @@ namespace GeoDataSource
 
                 }
             }
+
+            if(country!=null) country.PhoneInformation = PhoneManager.Current.AllByCountry(country.Name);
+
 	        return country;
 	    }
 

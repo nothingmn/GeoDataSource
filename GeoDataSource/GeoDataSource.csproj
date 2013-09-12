@@ -53,6 +53,8 @@
     <Compile Include="CountryParser.cs" />
     <Compile Include="FeatureCodeParser.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="PhoneInformation.cs" />
+    <Compile Include="PhoneManager.cs" />
     <Compile Include="TimeZone.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="Extensions\EAP\EAPCommon.cs" />
@@ -71,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="GeoDataSource.dat" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="phones.dat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
