@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 
 namespace GeoDataSource
@@ -16,7 +17,17 @@ namespace GeoDataSource
 	{
 		//GeoNameDatabase.allCountries.dat
 
-		private static GeoData current = null;
+	    public static Task<GeoData> LoadAsync()
+	    {
+	        if (current != null) return Task.FromResult(Current);
+	        return Task.Factory.StartNew(() =>
+	        {
+	            var x = Current;
+	            return Task.FromResult(x);
+	        }).Result;
+	    }
+
+	    private static GeoData current = null;
 		private static object _Slock = new object();
 		public static GeoData Current
 		{

@@ -32,5 +32,16 @@ namespace GeoDataSource.Tests
             }
             Task.WaitAll(tasks.ToArray());
         }
+
+        [Test]
+        public void TPLLoad()
+        {
+            GeoData.LoadAsync().ContinueWith(t =>
+            {
+                var geo = t.Result;
+                Assert.IsNotNull(geo);
+                Assert.IsNotNull(geo.ProvincesByCountry("USA"));
+            }).Wait();
+        }
     }
 }
